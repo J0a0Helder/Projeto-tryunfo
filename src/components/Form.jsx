@@ -53,7 +53,7 @@ class Form extends Component {
             <input
               id="input1"
               type="number"
-              name="cardAtt01"
+              name="cardAttr1"
               data-testid="attr1-input"
               value={ cardAttr1 }
               onChange={ onInputChange }
@@ -66,7 +66,7 @@ class Form extends Component {
             <input
               id="input2"
               type="number"
-              name="cardAtt02"
+              name="cardAttr2"
               data-testid="attr2-input"
               value={ cardAttr2 }
               onChange={ onInputChange }
@@ -79,7 +79,7 @@ class Form extends Component {
             <input
               id="input3"
               type="number"
-              name="cardAtt03"
+              name="cardAttr3"
               data-testid="attr3-input"
               value={ cardAttr3 }
               onChange={ onInputChange }
@@ -92,6 +92,7 @@ class Form extends Component {
           <label htmlFor="image-input">
             Card Imagem:
             <input
+              name="cardImage"
               type="text"
               data-testid="image-input"
               id="image-input"
@@ -103,12 +104,12 @@ class Form extends Component {
 
         <br />
         <div>
-          <label htmlFor="cardSelect">
+          <label htmlFor="card-select">
             Card Rarity:
             <select
-              name="cardSelect"
+              name="cardRare"
               data-testid="rare-input"
-              id="cardSelect"
+              id="card-select"
               value={ cardRare }
               onChange={ onInputChange }
             >
