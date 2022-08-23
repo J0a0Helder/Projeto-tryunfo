@@ -63,8 +63,6 @@ class Form extends Component {
             />
           </label>
         </div>
-
-        <br />
         <div>
           <label htmlFor="input2">
             Attribute 02:
@@ -79,8 +77,6 @@ class Form extends Component {
             />
           </label>
         </div>
-
-        <br />
         <div>
           <label htmlFor="input3">
             Attribute 03:
@@ -120,7 +116,6 @@ class Form extends Component {
               value={ cardRare }
               onChange={ onInputChange }
             >
-              <option value="" selected disabled>Select Card Rarity</option>
               <option value="normal">normal</option>
               <option value="raro">raro</option>
               <option value="muitoRaro">muito raro</option>
