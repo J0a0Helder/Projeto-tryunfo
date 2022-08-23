@@ -18,107 +18,109 @@ class Form extends Component {
     } = this.props;
     return (
       <form action="">
-        <fieldset>
+        <label htmlFor="card-name">
+          Card Name:
+          <input
+            id="card-name"
+            type="text"
+            name="cardName"
+            data-testid="name-input"
+            placeholder="Card Name"
+            value={ cardName }
+            onChange={ onInputChange }
+          />
+        </label>
 
-          <label htmlFor="card-name">
-            Card Name:
-            <input
-              id="card-name"
-              type="text"
-              name="cardName"
-              data-testid="name-input"
-              placeholder="Card Name"
-              value={ cardName }
-              onChange={ onInputChange }
-            />
-          </label>
+        <br />
 
-          <label htmlFor="card-description">
-            Card Description:
-            <textarea
-              id="card-description"
-              name="cardDescription"
-              data-testid="description-input"
-              placeholder="Card Description"
-              value={ cardDescription }
-              onChange={ onInputChange }
-            />
-          </label>
+        <label htmlFor="card-description">
+          Card Description:
+          <textarea
+            id="card-description"
+            name="cardDescription"
+            data-testid="description-input"
+            placeholder="Card Description"
+            value={ cardDescription }
+            onChange={ onInputChange }
+          />
+        </label>
 
-        </fieldset>
+        <br />
 
-        <fieldset>
-          <div>
-            <label htmlFor="input1">
-              Attribute 01:
-              <input
-                id="input1"
-                type="number"
-                name="cardAtt01"
-                data-testid="attr1-input"
-                placeholder="Card attribute 01"
-                value={ cardAttr1 }
-                onChange={ onInputChange }
-              />
-            </label>
-          </div>
-          <div>
-            <label htmlFor="input2">
-              Attribute 02:
-              <input
-                id="input2"
-                type="number"
-                name="cardAtt02"
-                data-testid="attr2-input"
-                placeholder="Card attribute 02"
-                value={ cardAttr2 }
-                onChange={ onInputChange }
-              />
-            </label>
-          </div>
-          <div>
-            <label htmlFor="input3">
-              Attribute 03:
-              <input
-                id="input3"
-                type="number"
-                name="cardAtt03"
-                data-testid="attr3-input"
-                placeholder="Card attribute 03"
-                value={ cardAttr3 }
-                onChange={ onInputChange }
-              />
-            </label>
-          </div>
-        </fieldset>
+        <label htmlFor="input1">
+          Attribute 01:
+          <input
+            id="input1"
+            type="number"
+            name="cardAtt01"
+            data-testid="attr1-input"
+            placeholder="Card attribute 01"
+            value={ cardAttr1 }
+            onChange={ onInputChange }
+          />
+        </label>
 
-        <fieldset>
-          <label htmlFor="image-input">
-            Card Imagem:
-            <input
-              type="text"
-              data-testid="image-input"
-              id="image-input"
-              value={ cardImage }
-              onChange={ onInputChange }
-            />
-          </label>
-          <label htmlFor="cardSelect">
-            Card Rarity:
-            <select
-              name="cardSelect"
-              id="cardSelect"
-              value={ cardRare }
-              onChange={ onInputChange }
-            >
-              <option value="" selected disabled>Select Card Rarity</option>
-              <option value="normal">normal</option>
-              <option value="raro">raro</option>
-              <option value="muitoRaro">muito raro</option>
-            </select>
-          </label>
+        <br />
 
-        </fieldset>
+        <label htmlFor="input2">
+          Attribute 02:
+          <input
+            id="input2"
+            type="number"
+            name="cardAtt02"
+            data-testid="attr2-input"
+            placeholder="Card attribute 02"
+            value={ cardAttr2 }
+            onChange={ onInputChange }
+          />
+        </label>
+
+        <br />
+
+        <label htmlFor="input3">
+          Attribute 03:
+          <input
+            id="input3"
+            type="number"
+            name="cardAtt03"
+            data-testid="attr3-input"
+            placeholder="Card attribute 03"
+            value={ cardAttr3 }
+            onChange={ onInputChange }
+          />
+        </label>
+
+        <br />
+
+        <label htmlFor="image-input">
+          Card Imagem:
+          <input
+            type="text"
+            data-testid="image-input"
+            id="image-input"
+            value={ cardImage }
+            onChange={ onInputChange }
+          />
+        </label>
+
+        <br />
+
+        <label htmlFor="cardSelect">
+          Card Rarity:
+          <select
+            name="cardSelect"
+            id="cardSelect"
+            value={ cardRare }
+            onChange={ onInputChange }
+          >
+            <option value="" selected disabled>Select Card Rarity</option>
+            <option value="normal">normal</option>
+            <option value="raro">raro</option>
+            <option value="muitoRaro">muito raro</option>
+          </select>
+        </label>
+
+        <br />
 
         <label htmlFor="card-super">
           <input
