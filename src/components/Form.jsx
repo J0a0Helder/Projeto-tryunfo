@@ -52,6 +52,8 @@ class Form extends Component {
             Attribute 01:
             <input
               id="input1"
+              min="0"
+              max="90"
               type="number"
               name="cardAttr1"
               data-testid="attr1-input"
@@ -65,6 +67,8 @@ class Form extends Component {
             Attribute 02:
             <input
               id="input2"
+              min="0"
+              max="90"
               type="number"
               name="cardAttr2"
               data-testid="attr2-input"
@@ -78,6 +82,8 @@ class Form extends Component {
             Attribute 03:
             <input
               id="input3"
+              min="0"
+              max="90"
               type="number"
               name="cardAttr3"
               data-testid="attr3-input"
