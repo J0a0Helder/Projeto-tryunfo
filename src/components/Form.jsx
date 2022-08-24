@@ -11,11 +11,12 @@ class Form extends Component {
       cardImage,
       cardRare,
       cardTrunfo,
-      // hasTrunfo,
+      hasTrunfo,
       isSaveButtonDisabled,
       onInputChange,
       onSaveButtonClick,
     } = this.props;
+
     return (
       <form>
         <div>
@@ -128,17 +129,23 @@ class Form extends Component {
 
         <br />
         <div>
-          <label htmlFor="trunfo-input">
-            <input
-              id="trunfo-input"
-              type="checkbox"
-              name="cardTrunfo"
-              data-testid="trunfo-input"
-              checked={ cardTrunfo }
-              onChange={ onInputChange }
-            />
-            Card is SuperTrunfo
-          </label>
+          {
+            hasTrunfo && (<p>Você já tem um Super Trunfo em seu baralho</p>)
+          }
+          {
+            !hasTrunfo && (
+              <label htmlFor="trunfo-input">
+                <input
+                  id="trunfo-input"
+                  type="checkbox"
+                  name="cardTrunfo"
+                  data-testid="trunfo-input"
+                  checked={ cardTrunfo }
+                  onChange={ onInputChange }
+                />
+                Card is SuperTrunfo
+              </label>)
+          }
         </div>
 
         <br />
@@ -148,14 +155,19 @@ class Form extends Component {
             data-testid="save-button"
             name="saveButton"
             disabled={ isSaveButtonDisabled }
-            onClick={ () => onSaveButtonClick({ cardName,
-              cardDescription,
-              cardAttr1,
-              cardAttr2,
-              cardAttr3,
-              cardImage,
-              cardRare,
-            }) }
+            onClick={ () => {
+              onSaveButtonClick({
+                cardName,
+                cardDescription,
+                cardImage,
+                cardAttr1,
+                cardAttr2,
+                cardAttr3,
+                cardRare,
+                cardTrunfo,
+                hasTrunfo,
+              });
+            } }
           >
             Salvar
           </button>
@@ -174,7 +186,7 @@ Form.propTypes = {
   cardImage: PropTypes.string.isRequired,
   cardRare: PropTypes.string.isRequired,
   cardTrunfo: PropTypes.bool.isRequired,
-  // hasTrunfo: PropTypes.bool.isRequired,
+  hasTrunfo: PropTypes.bool.isRequired,
   isSaveButtonDisabled: PropTypes.bool.isRequired,
   onInputChange: PropTypes.func.isRequired,
   onSaveButtonClick: PropTypes.func.isRequired,

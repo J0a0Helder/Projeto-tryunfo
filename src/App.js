@@ -14,7 +14,7 @@ class App extends React.Component {
     cardTrunfo: false,
     isSaveButtonDisabled: true,
     data: [],
-    trunfo: false,
+    hasTrunfo: false,
   };
 
   validation = () => {
@@ -49,20 +49,26 @@ class App extends React.Component {
 
   onSaveButtonClick = (obj) => {
     if (obj.cardTrunfo === true) {
-      this.setState({ trunfo: true });
+      this.setState({ hasTrunfo: true });
     }
 
-    this.setState((prevState) => ({
-      data: [...prevState.data, obj],
-      cardName: '',
-      cardDescription: '',
-      cardImage: '',
-      cardAttr1: 0,
-      cardAttr2: 0,
-      cardAttr3: 0,
-      cardRare: 'normal',
-      cardTrunfo: false,
-    }));
+    this.setState(
+      (prevState) => ({
+        data: [...prevState.data, obj] }),
+      () => {
+        this.setState({
+          cardName: '',
+          cardDescription: '',
+          cardImage: '',
+          cardAttr1: '0',
+          cardAttr2: '0',
+          cardAttr3: '0',
+          cardRare: 'normal',
+          cardTrunfo: false,
+          isSaveButtonDisabled: true,
+        });
+      },
+    );
   };
 
   handleChange = ({ target }) => {
@@ -84,7 +90,7 @@ class App extends React.Component {
       cardRare,
       cardTrunfo,
       isSaveButtonDisabled,
-      trunfo,
+      hasTrunfo,
     } = this.state;
 
     return (
@@ -102,7 +108,7 @@ class App extends React.Component {
           cardTrunfo={ cardTrunfo }
           isSaveButtonDisabled={ isSaveButtonDisabled }
           onSaveButtonClick={ this.onSaveButtonClick }
-          trunfo={ trunfo }
+          hasTrunfo={ hasTrunfo }
         />
         <Card
           cardName={ cardName }
