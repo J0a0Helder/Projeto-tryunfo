@@ -33,7 +33,7 @@ class Form extends Component {
             />
           </label>
         </div>
-
+        <hr />
         <div className="campo">
           <label htmlFor="card-description">
             Card Description:
@@ -46,10 +46,10 @@ class Form extends Component {
             />
           </label>
         </div>
-
+        <hr />
         <div className="campo">
           <label htmlFor="input1">
-            Attribute 01:
+            Attack:
             <input
               id="input1"
               min="0"
@@ -65,7 +65,7 @@ class Form extends Component {
 
         <div className="campo">
           <label htmlFor="input2">
-            Attribute 02:
+            Defense:
             <input
               id="input2"
               min="0"
@@ -81,7 +81,7 @@ class Form extends Component {
 
         <div className="campo">
           <label htmlFor="input3">
-            Attribute 03:
+            Speed:
             <input
               id="input3"
               min="0"
@@ -94,7 +94,7 @@ class Form extends Component {
             />
           </label>
         </div>
-
+        <hr />
         <div className="campo">
           <label htmlFor="image-input">
             Card Imagem:
@@ -108,7 +108,7 @@ class Form extends Component {
             />
           </label>
         </div>
-
+        <hr />
         <div className="campo">
           <label htmlFor="card-select">
             Card Rarity:
@@ -120,12 +120,12 @@ class Form extends Component {
               onChange={ onInputChange }
             >
               <option value="normal">normal</option>
-              <option value="raro">raro</option>
-              <option value="muito raro">muito raro</option>
+              <option value="raro">rare</option>
+              <option value="muito raro">Very rare</option>
             </select>
           </label>
         </div>
-
+        <hr />
         <div className="campo">
           {
             hasTrunfo && (<p>Você já tem um Super Trunfo em seu baralho</p>)

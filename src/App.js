@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
+import './style/app.css';
 
 class App extends React.Component {
   state = {
@@ -107,8 +108,9 @@ class App extends React.Component {
 
     return (
       <main>
-        <h1>Tryunfo</h1>
-        <section>
+        <section className="creat-section">
+          <h1>Tryunfo</h1>
+          <br />
           <Form
             onInputChange={ this.handleChange }
             cardName={ cardName }
@@ -138,7 +140,9 @@ class App extends React.Component {
           />
         </section>
 
-        <section>
+        <section className="saved-cards">
+          <h2>saved cards:</h2>
+          <br />
           {
             data.map((element, index) => (
               <>
@@ -158,6 +162,7 @@ class App extends React.Component {
                   type="button"
                   data-testid="delete-button"
                   onClick={ () => this.removeCard(index) }
+                  className="delete-button"
                 >
                   Excluir
                 </button>
