@@ -79,6 +79,17 @@ class App extends React.Component {
     }, () => { this.validation(); });
   };
 
+  removeCard = (index) => {
+    // Usei este video para realizar esse requisito: https://www.youtube.com/watch?v=y8ckoDFXdVE
+    const { data } = this.state;
+    data.slice();
+    data.splice(index, 1);
+    this.setState({ data });
+    this.setState((prevState) => ({
+      hasTrunfo: prevState.data.some((card) => card.cardTrunfo === true),
+    }));
+  };
+
   render() {
     const {
       cardName,
@@ -129,17 +140,30 @@ class App extends React.Component {
 
         <section>
           {
-            data.map((element) => (<Card
-              cardName={ element.cardName }
-              cardDescription={ element.cardDescription }
-              cardAttr1={ element.cardAttr1 }
-              cardAttr2={ element.cardAttr2 }
-              cardAttr3={ element.cardAttr3 }
-              cardImage={ element.cardImage }
-              cardRare={ element.cardRare }
-              cardTrunfo={ element.cardTrunfo }
-              key={ element.cardName }
-            />))
+            data.map((element, index) => (
+              <>
+                <Card
+                  cardName={ element.cardName }
+                  cardDescription={ element.cardDescription }
+                  cardAttr1={ element.cardAttr1 }
+                  cardAttr2={ element.cardAttr2 }
+                  cardAttr3={ element.cardAttr3 }
+                  cardImage={ element.cardImage }
+                  cardRare={ element.cardRare }
+                  cardTrunfo={ element.cardTrunfo }
+                  key={ element.cardName }
+                />
+
+                <button
+                  type="button"
+                  data-testid="delete-button"
+                  onClick={ () => this.removeCard(index) }
+                >
+                  Excluir
+                </button>
+
+              </>
+            ))
           }
         </section>
       </>
