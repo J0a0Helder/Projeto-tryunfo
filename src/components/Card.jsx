@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../style/card.css';
 
 class Card extends Component {
   render() {
@@ -17,17 +18,37 @@ class Card extends Component {
       if (trunfo === true) return <h3 data-testid="trunfo-card">Super Trunfo</h3>;
     };
     return (
-      <div>
-        <h2 data-testid="name-card">{cardName}</h2>
-        <img src={ cardImage } alt={ cardName } data-testid="image-card" />
-        <p data-testid="description-card">{cardDescription}</p>
-        <div>
-          <h3 data-testid="attr1-card">{cardAttr1}</h3>
-          <h3 data-testid="attr2-card">{cardAttr2}</h3>
-          <h3 data-testid="attr3-card">{cardAttr3}</h3>
+      <div className="card-container">
+        <div className="card">
+          <div className="top-card">
+            <h2 data-testid="name-card" className="card-title">{cardName}</h2>
+          </div>
+          <div>
+            <img
+              src={ cardImage }
+              alt={ cardName }
+              data-testid="image-card"
+              className="image-card"
+            />
+            <p data-testid="description-card" className="info-card">{cardDescription}</p>
+          </div>
+          <div className="bottom-card">
+            <h3 data-testid="attr1-card" className="attr">
+              Attack.........
+              {cardAttr1}
+            </h3>
+            <h3 data-testid="attr2-card" className="attr">
+              Defense........
+              {cardAttr2}
+            </h3>
+            <h3 data-testid="attr3-card" className="attr">
+              Speed...........
+              {cardAttr3}
+            </h3>
+          </div>
+          <h4 data-testid="rare-card" className="rare-card">{cardRare}</h4>
+          {verify(cardTrunfo)}
         </div>
-        <h4 data-testid="rare-card">{cardRare}</h4>
-        {verify(cardTrunfo)}
       </div>
     );
   }

@@ -1,0 +1,40 @@
+/* usei este video para estilização: 
+https://www.youtube.com/watch?v=Ws8C1ZwFJ2Q&ab_channel=Markzuel */
+
+.card-container {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.card {
+  background-color: aliceblue;
+  border-radius: 20px;
+  box-shadow: 0.1px 2px 18px rgba(10, 9, 9, 0.747);
+}
+
+.card-title {
+  color: rgb(4, 148, 16);
+}
+
+.top-card {
+  padding: 1px 20px 20px;
+}
+
+.bottom-card {
+  padding: 20px;
+}
+
+.rare-card {
+  color: rgb(167, 142, 2);
+}
+
+.attr {
+  color: rgb(207, 46, 46);
+}
+
+.info-card {
+  color: rgb(4, 54, 148);
+}

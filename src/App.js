@@ -60,9 +60,9 @@ class App extends React.Component {
           cardName: '',
           cardDescription: '',
           cardImage: '',
-          cardAttr1: '0',
-          cardAttr2: '0',
-          cardAttr3: '0',
+          cardAttr1: '',
+          cardAttr2: '',
+          cardAttr3: '',
           cardRare: 'normal',
           cardTrunfo: false,
           isSaveButtonDisabled: true,
@@ -106,7 +106,7 @@ class App extends React.Component {
     } = this.state;
 
     return (
-      <>
+      <main>
         <h1>Tryunfo</h1>
         <section>
           <Form
@@ -166,7 +166,7 @@ class App extends React.Component {
             ))
           }
         </section>
-      </>
+      </main>
     );
   }
 }
