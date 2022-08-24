@@ -1,0 +1,64 @@
+/* para estilização usei como exemplo esse video:
+https://www.youtube.com/watch?v=wwqOJ2o84S4&ab_channel=RafaellaBallerini */
+
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap') ;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(212, 226, 255);
+  font-family: Silkscreen , cursive;
+  font-size: 1em;
+  justify-content: left;
+  margin-left: 10%;
+  margin-top: 2%;
+}
+
+input, select, textarea, button {
+  border-radius: 5px;
+}
+
+.campo {
+  margin-bottom: 1em;
+}
+
+.campo label {
+  color: rgb(3, 39, 124);
+  display: block;
+  margin-bottom: 0.2em;
+}
+
+.campo input, .campo select, .campo textarea {
+  border: 1px solid rgb(91, 144, 252);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 0.2em;
+}
+
+.campo select option {
+  font-family: fantasy;
+  padding-right: 0.2em;
+}
+
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+  background: rgb(192, 211, 245);
+}
+
+.button {
+  background: rgb(155, 175, 211);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  color: rgb(16, 76, 218);
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  padding: 0.2em , 0.6em;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+  background: rgb(195, 216, 250);
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: none;
+}

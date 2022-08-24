@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../style/Formulario.css';
 
 class Form extends Component {
   render() {
@@ -19,7 +20,7 @@ class Form extends Component {
 
     return (
       <form>
-        <div>
+        <div className="campo">
           <label htmlFor="name-input">
             Card Name:
             <input
@@ -33,8 +34,7 @@ class Form extends Component {
           </label>
         </div>
 
-        <br />
-        <div>
+        <div className="campo">
           <label htmlFor="card-description">
             Card Description:
             <textarea
@@ -47,8 +47,7 @@ class Form extends Component {
           </label>
         </div>
 
-        <br />
-        <div>
+        <div className="campo">
           <label htmlFor="input1">
             Attribute 01:
             <input
@@ -63,7 +62,8 @@ class Form extends Component {
             />
           </label>
         </div>
-        <div>
+
+        <div className="campo">
           <label htmlFor="input2">
             Attribute 02:
             <input
@@ -78,7 +78,8 @@ class Form extends Component {
             />
           </label>
         </div>
-        <div>
+
+        <div className="campo">
           <label htmlFor="input3">
             Attribute 03:
             <input
@@ -94,8 +95,7 @@ class Form extends Component {
           </label>
         </div>
 
-        <br />
-        <div>
+        <div className="campo">
           <label htmlFor="image-input">
             Card Imagem:
             <input
@@ -109,8 +109,7 @@ class Form extends Component {
           </label>
         </div>
 
-        <br />
-        <div>
+        <div className="campo">
           <label htmlFor="card-select">
             Card Rarity:
             <select
@@ -127,8 +126,7 @@ class Form extends Component {
           </label>
         </div>
 
-        <br />
-        <div>
+        <div className="campo">
           {
             hasTrunfo && (<p>Você já tem um Super Trunfo em seu baralho</p>)
           }
@@ -148,11 +146,11 @@ class Form extends Component {
           }
         </div>
 
-        <br />
-        <div>
+        <div className="campo">
           <button
             type="submit"
             data-testid="save-button"
+            className="button"
             name="saveButton"
             disabled={ isSaveButtonDisabled }
             onClick={ () => {
